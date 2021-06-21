@@ -1,0 +1,22 @@
+{% extends 'ecom/cart1.html' %} {% load static %} {% block content %}
+<div>
+
+    <h1 style="text-align: center;">    welcome to our product details</h1>
+   <hr>
+
+    {% for item in products %}
+      <div class="cart-row">
+        <div style="flex: 2">
+          <img class="row-image" src="{{item.imageURL}}" />
+        </div>
+        <div style="flex: 2"><p>{{item.name}}</p></div>
+        <div style="flex: 2"><p>{{item.description}} </p></div>
+        <div>  </div>
+        <div style="flex: 2"><p>{{item.available}}</p></div>
+        <div style="flex: 1"><p>{{item.price}} €</p></div>
+        
+      </div><hr>
+    {% endfor %}
+</div>
+
+{% endblock  %}
